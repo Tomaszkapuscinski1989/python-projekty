@@ -16,7 +16,6 @@ def game():
                 "play": 1,
             }
 
-            print("")
             print("Opcje".upper().center(30, "-"))
             print("nowa gra".upper().ljust(28, "."), option["play"])
             print("wyjscie".upper().ljust(28, "."), option["quit"])
@@ -28,7 +27,7 @@ def game():
                     raise ValueError
             except ValueError:
                 os.system("cls" if os.name == "nt" else "clear")
-                print("błedny wybór\nwybierz ponownie".upper())
+                print("błedny wybór\nwybierz ponownie\n".upper())
                 return menu()
 
             else:
@@ -55,7 +54,7 @@ def game():
                         raise ValueError
                 except ValueError:
                     os.system("cls" if os.name == "nt" else "clear")
-                    print("błedny wybór\nwybierz ponownie".upper())
+                    print("błedny wybór\nwybierz ponownie\n".upper())
                 else:
                     move = False
                     os.system("cls" if os.name == "nt" else "clear")
@@ -67,17 +66,17 @@ def game():
             ):
                 print(f"Gracz wybrał: {player}")
                 print(f"Konputer wybrał: {comp}")
-                print("wygrałeś".upper())
+                print("wygrałeś\n".upper())
                 score["win"] += 1
             elif player == comp:
                 print(f"Gracz wybrał: {player}")
                 print(f"Konputer wybrał: {comp}")
-                print("remis".upper())
+                print("remis\n".upper())
                 score["tie"] += 1
             else:
                 print(f"Gracz wybrał: {player}")
                 print(f"Konputer wybrał: {comp}")
-                print("przegrałeś".upper())
+                print("przegrałeś\n".upper())
                 score["lost"] += 1
             wyb = menu()
 
@@ -91,6 +90,6 @@ def game():
 
 rock_paper_scissors_game = game()
 
-if "__name__" == "__main__":
+if __name__ == "__main__":
 
     rock_paper_scissors_game()
