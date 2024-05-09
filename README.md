@@ -1,3 +1,3 @@
 # Python
 
-Repetytorium zawierające małe projekty napisane w języku python
+Repetytorium zawierające małe projekty napisane w języku PYTHON
